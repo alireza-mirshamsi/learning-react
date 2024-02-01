@@ -1,10 +1,6 @@
 function filteredUserList(users) {
     if (Array.isArray(users)) {
-        let newArray = [];
-        for (var i = 0; i < users.length; i++) {
-            newArray.push(users[i])
-        }
-        const sortName = newArray.sort((a, b) => {
+        const sortName = users.sort((a, b) => {
             const nameA = a.name.toUpperCase();
             const nameB = b.name.toUpperCase();
             if (nameA < nameB) {

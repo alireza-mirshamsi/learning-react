@@ -1,7 +1,10 @@
 function filteredUserList(users) {
-    if (users === undefined) return users;
-    if (!Array.isArray(users)) return "Input must be an array of users";
-    return users.filter((user) => user.age > 11).sort((user) => user.name);
+    if (!Array.isArray(users)) {
+        return "Input must be an array of users"
+    }
+    return users.filter(user => {
+        return user.age > 11
+    }).sort((a, b) => a.name.toLowerCase() > b.name.toLowerCase() ? 1 : -1)
 }
 
 const filter = filteredUserList;
@@ -14,6 +17,6 @@ const users = [
     { name: "SAJJAD", age: 11 },
 ];
 
-console.log(filter(1232));
+console.log(filter(users));
 
 module.exports = filter;
