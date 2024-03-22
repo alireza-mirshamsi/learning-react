@@ -1,5 +1,6 @@
 import Title from "./components/Title";
 import Content from "./components/content";
+import Card from "./components/context/Card";
 
 function App() {
   const htmlContent: string = "<h1> hello alireza!, hello </h1>"
@@ -13,6 +14,7 @@ function App() {
       <Content>
         <div dangerouslySetInnerHTML={{__html: htmlContent}}></div>
       </Content>
+      <Card />
     </>
   );
 }
